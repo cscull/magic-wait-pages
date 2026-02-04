@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #0a1628;
+  --color-navy-900: #0f1f3a;
+  --color-navy-800: #152847;
+  --color-navy-700: #1a365d;
+  --color-navy-600: #234981;
+  --color-gold: #d4af37;
+  --color-gold-light: #e8c84a;
+  --color-gold-dark: #b8962e;
+  --color-mk-purple: #7c3aed;
+  --color-mk-gold: #d4af37;
+  --color-epcot-teal: #0d9488;
+  --color-epcot-silver: #c0c0c0;
+  --color-hs-red: #dc2626;
+  --color-hs-amber: #f59e0b;
+  --color-ak-green: #16a34a;
+  --color-ak-earth: #92400e;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f6fa;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-disney-blue: #1a73e8;
+  --color-disney-blue-light: #4fc3f7;
+  --font-heading: "Outfit", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-muted);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Scroll-triggered fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-1 {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease-out 0.15s, transform 0.8s ease-out 0.15s;
+}
+
+.fade-up-delay-1.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-up-delay-2 {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
+}
+
+.fade-up-delay-2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gold sparkle particles */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.sparkle-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  animation: sparkle 3s ease-in-out infinite;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Gold shimmer for headings */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-dark) 0%,
+    var(--color-gold-light) 25%,
+    var(--color-gold) 50%,
+    var(--color-gold-light) 75%,
+    var(--color-gold-dark) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s linear infinite;
+  will-change: background-position;
+}
+
+/* Light card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Gold gradient button */
+.btn-gold {
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold), var(--color-gold-light));
+  color: var(--color-navy-950);
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.4);
+  transform: translateY(-1px);
+}
+
+/* iPhone mockup frame */
+.phone-mockup {
+  position: relative;
+  width: 280px;
+  height: 570px;
+  border-radius: 40px;
+  border: 3px solid #e2e8f0;
+  background: #f0f1f5;
+  overflow: hidden;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.phone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 28px;
+  background: #e2e8f0;
+  border-radius: 0 0 16px 16px;
+  z-index: 2;
+}
+
+/* Watch mockup */
+.watch-mockup {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  border-radius: 40px;
+  border: 3px solid #e2e8f0;
+  background: #f0f1f5;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Screenshot carousel */
+.screenshot-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+  scrollbar-width: none;
+}
+
+.screenshot-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot-scroll > * {
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+/* Gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+}
+
+/* Section transition */
+section {
+  position: relative;
+}
+
+/* Radial glow */
+.radial-gold-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
