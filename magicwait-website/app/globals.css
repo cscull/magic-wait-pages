@@ -180,49 +180,31 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-1px);
 }
 
-/* iPhone mockup frame */
-.phone-mockup {
-  position: relative;
-  width: 280px;
-  height: 570px;
-  border-radius: 40px;
-  border: 3px solid #e2e8f0;
-  background: #f0f1f5;
-  overflow: hidden;
-  box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.08),
-    0 8px 32px rgba(0, 0, 0, 0.06);
+/* Hero phone screenshot */
+.hero-phone {
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.12)) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.08));
 }
 
-.phone-mockup::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 28px;
-  background: #e2e8f0;
-  border-radius: 0 0 16px 16px;
-  z-index: 2;
+/* Screenshot carousel phone images */
+.screenshot-phone {
+  width: 260px;
+  height: auto;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.1)) drop-shadow(0 1px 4px rgba(0, 0, 0, 0.06));
 }
 
-/* Watch mockup */
-.watch-mockup {
-  position: relative;
-  width: 180px;
-  height: 220px;
-  border-radius: 40px;
-  border: 3px solid #e2e8f0;
-  background: #f0f1f5;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+/* Watch screenshot */
+.watch-screenshot {
+  width: 220px;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
 }
 
 /* Screenshot carousel */
 .screenshot-scroll {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;

@@ -46,7 +46,7 @@ export default function Hero() {
           </p>
 
           {/* App Store download button */}
-          <a href="#download" className="btn-gold text-base">
+          <a href="https://apps.apple.com/us/app/magicwait/id6742753690" className="btn-gold text-base">
             <svg
               className="h-5 w-5"
               viewBox="0 0 384 512"
@@ -64,13 +64,13 @@ export default function Hero() {
           {/* Radial glow behind the phone (mobile) */}
           <div className="radial-gold-glow absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:hidden" />
 
-          <div className="phone-mockup relative z-10">
-            <div className="flex h-full w-full items-center justify-center">
-              <span className="text-sm text-gray-400 select-none">
-                Screenshot
-              </span>
-            </div>
-          </div>
+          <img
+            src="/screenshots/wait-times-mk.png"
+            alt="MagicWait app showing real-time wait times for Magic Kingdom attractions"
+            className="hero-phone relative z-10"
+            width={300}
+            height={614}
+          />
         </div>
       </div>
     </section>

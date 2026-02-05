@@ -18,7 +18,7 @@ export default function DownloadCTA() {
         {/* App Store download button */}
         <div className="fade-up-delay-1 mb-6">
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/magicwait/id6742753690"
             className="btn-gold text-lg py-4 px-8"
             aria-label="Download MagicWait on the App Store"
           >

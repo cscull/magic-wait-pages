@@ -5,13 +5,13 @@ export default function WatchSection() {
         <div className="flex flex-col items-center gap-16 lg:flex-row lg:gap-20">
           {/* Left: Watch mockup */}
           <div className="fade-up flex flex-shrink-0 items-center justify-center">
-            <div className="watch-mockup">
-              <div className="flex h-full w-full items-center justify-center">
-                <span className="text-sm text-gray-400 select-none">
-                  Watch Screenshot
-                </span>
-              </div>
-            </div>
+            <img
+              src="/screenshots/apple-watch-wait-times.png"
+              alt="MagicWait on Apple Watch showing wait times for Animal Kingdom attractions"
+              className="watch-screenshot"
+              width={220}
+              height={280}
+            />
           </div>
 
           {/* Right: Text content */}
@@ -26,7 +26,7 @@ export default function WatchSection() {
               wrist.
             </p>
 
-            <a href="#download" className="btn-gold text-base">
+            <a href="https://apps.apple.com/us/app/magicwait/id6742753690" className="btn-gold text-base">
               <svg
                 className="h-5 w-5"
                 viewBox="0 0 384 512"

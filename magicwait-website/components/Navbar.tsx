@@ -61,9 +61,10 @@ export default function Navbar() {
         {/* Wordmark */}
         <Link
           href="/"
-          className="font-heading text-2xl font-bold tracking-tight text-navy-950 transition-colors hover:text-gold"
+          className="flex items-center gap-2 font-heading text-2xl font-bold tracking-tight text-navy-950 transition-colors hover:text-gold"
           aria-label="MagicWait home"
         >
+          <img src="/icon.png" alt="" className="h-8 w-8 rounded-lg" aria-hidden="true" />
           MagicWait
         </Link>
 
@@ -82,7 +83,7 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <a href="#download" className="btn-gold hidden text-sm md:inline-flex">
+        <a href="https://apps.apple.com/us/app/magicwait/id6742753690" className="btn-gold hidden text-sm md:inline-flex">
           Download Free
         </a>
 
@@ -143,7 +144,7 @@ export default function Navbar() {
           </ul>
           <div className="mt-6">
             <a
-              href="#download"
+              href="https://apps.apple.com/us/app/magicwait/id6742753690"
               onClick={handleNavClick}
               className="btn-gold w-full justify-center text-sm"
             >

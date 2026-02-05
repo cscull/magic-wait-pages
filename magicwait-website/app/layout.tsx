@@ -47,6 +47,10 @@ export const metadata: Metadata = {
       "Free real-time wait times, Lightning Lane pricing, and ride tracking for all 4 Disney World parks.",
   },
   metadataBase: new URL("https://magicwait.com"),
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
