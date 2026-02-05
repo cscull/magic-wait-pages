@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Firebase
+firebase-debug.log
+
+# Playwright MCP
+.playwright-mcp/
